@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/*----------- Comman style ---------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+h1{
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    line-height: 80px;
+}
+h2{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    line-height: 60px;
+}
+h4{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+.btn{
+    background: #f00;
+    border: none;
+    outline: none;
+    color: #d6d6d6;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.btn:hover{
+    background:#8a1404;
+    color: #fff;
+}
+
+/* ----------------------
+header start here
+----------------------- */
+header{
+    padding:0 0 50px 0;
+}
+header:hover .head-content .image img{
+    transform: scale(1.1);
+}
+.head-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    color:#f0f8ff;
+    background: linear-gradient( #8a1404, #0b0358);
+    padding:0 5%;
+    overflow: hidden;
+}
+.head-content .content{
+    width: 50%;
+}
+.head-content .image{
+    width: 50%;
+}
+.head-content .image img{
+    width: 90%;
+    height: 100%;
+    transition: 0.5s;
+}
+.head-content p{
+    margin: 25px 0;
+}
+/* --------------------
+main start here
+--------------------- */
+main{
+    padding: 50px 0;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    align-items: flex-start;
+    grid-gap: 25px;
+}
+/*------- aside here ----- */
+.main-content aside{
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient( #8a1404, #0b0358);
+    border-radius: 10px;
+}
+aside ul li{
+    list-style: none;
+    padding:15px;
+}
+aside ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    border: none;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background:#f0f8ff;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
+}
+aside ul li a:hover{
+    background:#8a1404;
+    color: #f0f8ff;
+}
+aside ul li a.active{
+    background: #f00;
+    color: #f0f8ff;
+}
+/* ----------aside end --------- */
+.main-content .blog-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+    
+}
+.blog-items .item{
+    /* border: 1px solid lightgray; */
+    box-shadow: 1px 1px 15px #ebe5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.blog-items .item img{
+    width: 100%;
+}
+.blog-items .item-content{
+    padding: 20px;
+}
+.blog-items .item-content .tag{
+    text-decoration: none;
+    font-size: 16px ;
+    font-weight: 500;
+    padding: 5px 20px;
+    border: 1px solid;
+    display: inline-block;
+    color: #000;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+.blog-items .item-content h4{
+    margin: 15px 0;
+}
+.item-footer {
+    color: gray;
+}
+.item-footer .comment{
+    margin-left: 15px;
+}
+.item-btn{
+    display: none;
+}
+/*---------------------main end here ------------------- */
+
+/* ---------------------
+footer start here 
+------------------- */
+footer{
+    background: linear-gradient( #8a1404, #0b0358);
+    padding: 50px 0;
+    text-align: center;
+    color: #f0f8ff;
+}
+footer .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+footer .contact a{
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+.footer-menu{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.footer-menu li{
+    list-style: none;
+    margin: 10px;
+}
+.footer-menu li a{
+    text-decoration: none;
+    color: lightgray;
+    padding: 5px 30px;
+    display: inline-block;
+}
+
+/*-------------------------
+ responsiv for tab 
+----------------------- */
+@media screen and (min-width:576px) and (max-width:992px) {
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    header{
+        padding:0 15px 25px;
+    }
+    .head-content p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 50px;
+        margin: 15px 0;
+    }
+
+    /*--------- main content ------- */
+    main{
+        padding:25px 15px;
+    }
+    .main-content{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .main-content aside{
+        background: none;
+    }
+    aside ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .main-content .blog-items{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blog-items .item.hiden{
+        display: none;
+    }
+    .item-btn{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/*---------------------------
+ responsiv for mobile 
+------------------------ */
+@media screen and (max-width:575px){
+    header{
+        padding: 0 10px 15px;
+    }
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .head-content{
+        flex-direction: column;
+        padding: 20px 10px 0;
+    }
+    .head-content p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 50px;
+    }
+    .head-content .content{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    .head-content .image{
+        width: 100%;
+    }
+/*---------- main start here --------- */
+main{
+    padding: 15px 10px;
+}
+    .main-content{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .main-content aside{
+        background: none;
+    }
+    .main-content .blog-items{
+        grid-template-columns: 1fr;
+    }
+    .blog-items .item.hiden{
+        display: none;
+    }
+
+    /* footer  */
+    footer{
+        padding: 15px 10px;
+    }
+    .footer-menu{
+        display: block;
+        padding:20px 5px 5px;
+    }
+}

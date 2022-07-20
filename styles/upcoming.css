@@ -1,0 +1,46 @@
+.upcoming-match{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+.match-day{
+    text-align: center;
+    padding: 30px 10px;
+    /* border: 1px solid lightgray; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px #ebe5e5;
+}
+.match-day .flag{
+    display: flex;
+    align-items: center;
+}
+.flag .country, .flag h4{
+    /* padding: 5px; */
+    font-size: 20px;
+    margin: 10px;
+}
+.flag .country img{
+    width: 100%;
+}
+.match-time{
+    color: gray;
+    margin: 10px 0;
+}
+
+/*---------------------------
+ responsive for tab 
+------------------------- */
+@media screen and (min-width:576px) and (max-width:992px){
+    .upcoming-match{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/*-------------------------
+ responsiv for mobile 
+------------------------ */
+@media screen and (max-width:575px){
+    .upcoming-match{
+        grid-template-columns: 1fr;
+    }
+}
